@@ -1,0 +1,167 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #f2f2f2;
+    padding: 0;
+    margin: 0;
+}
+
+/* --------------------------------------------- Header */
+
+.div-nav{
+    text-align: center;
+}
+
+.dropbtn {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 18px;
+    font-size: 16px;
+    border: none;
+    margin: 0;
+}
+  
+#dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #f0a329;
+    color: #ffffff;
+}
+  
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+#dropdown:hover {
+    background-color: #f2f2f2;
+}
+
+.dropbtn:hover {
+    background-color: #f0a329;
+    color: #ffffff;
+}
+
+/* --------------------------------------------- Slideshow */
+
+.slide {
+    width: 100%;
+}
+
+
+
+/* --------------------------------------------- Main body */
+
+#main-body {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#products-title {
+    color: #f0a329;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#tabel-produse {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: 80%;
+}
+
+.celula-produs{
+    text-align: center;
+}
+
+.produse{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: block;
+}
+
+.buton-cumpara {
+    margin-top: 10%;
+    margin-bottom: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.buton-cumpara:hover {
+    background-color: #f0a329;
+    color: #ffffff;
+}
+
+.celula-buton {
+    text-align: center;
+}
+
+.link-cos {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ------------------------------- Footer */
+
+footer {
+    margin-left: 20%;
+    margin-top: 10%;
+    width: 60%;
+}
+
+#tabel-footer {
+    table-layout: fixed;
+}
+
+.footer-row {
+    text-align: center;
+}
+
+.text-foot {
+    width: 33%;
+    color: #f0a329;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+.img-social {
+    width: 30%;
+    padding: 30%;
+}
+
+#termeni-cond {
+    font-size: 100%;
+    padding: 2%;
+    color: #f0a329;
+}

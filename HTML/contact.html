@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/contact-style.css">
+
+    <title>Contact</title>
+</head>
+<body style="background-color: #f2f2f2;">
+    <a href="../index.html"><img src="../Images/home-icon.png" width="3%" height="3%"></a>
+    <div style="width: 100%; height: 10%; text-align: center;">
+        <p>Formular contact</p>
+    </div>
+    <div id="bara-informatii">
+        <table id="tabel">
+            <tr>
+                <td>
+                    <img class="icon" src="../Images/flogo.png">
+                </td>
+                <td>
+                    <img class="icon" src="../Images/flogo.png">
+                </td>
+                <td>
+                    <img class="icon" src="../Images/flogo.png">
+                </td>
+                <td>
+                    <img class="icon" src="../Images/flogo.png">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Telefon
+                </td>
+                <td>
+                    Email
+                </td>
+                <td>
+                    Adresa
+                </td>
+                <td>
+                    Cod postal
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    +40 765 498 1981
+                </td>
+                <td>
+                    purrpaws@catfood.ro
+                </td>
+                <td>
+                    Mihai Viteazul nr. 56
+                </td>
+                <td>
+                    981 761
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="body">
+        <div style="display: inline-block;">
+            <form id="target">
+                <label for="prenume">Prenume: </label>
+                <input type="text" class="input-form" name="prenume" id="prenume" required>
+                <label for="nume">Nume: </label>
+                <input type="text" class="input-form" name="nume" id="nume" required><br>
+                <label for="email">Email: </label>
+                <input type="text" class="input-form" name="email" id="email" required><br>
+                <label for="subiect">Subiect: </label>
+                <input type="text" class="input-form" name="subiect" id="subiect" required><br>
+                <label for="mesaj">Mesaj: </label>
+                <textarea cols="30" rows="5" class="input-form" name="mesaj" id="mesaj" required></textarea>
+                <br>
+                <input id="buton-submit" type="submit" value="Trimite">
+            </form>
+        </div>
+        <div style="display: inline-block;">
+            <img src="../Images/pisica5.jpg" style="width: 100%;">
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#target').on('submit', function(){
+                $.post("../PHP/mesaj.php", $("#target").serialize());
+                alert("Succes");
+            });
+        });
+    </script>
+</body>
+</html>

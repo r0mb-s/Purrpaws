@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="CSS/main-style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="JS/slide-show.js"></script>
+
+    <title>Site</title>
+</head>
+<body>
+    <section>
+        <table style="width: 100%">
+            <tr>
+                <td><div class="div-nav"><a href="index.html"><button class="dropbtn">Acasa</button></a></div></td>
+                <td><div class="div-nav"><a href="HTML/despre-noi.html"><button class="dropbtn">Despre noi</button></a></div></td>
+                <td><div class="div-nav"><a href="HTML/contact.html"><button class="dropbtn">Contact</button></a></div></td>
+                <td><div class="div-nav"><a href="HTML/login.html"><button class="dropbtn">Cos</button></a></div></td>
+                <td>
+                    <div id="dropdown">
+                        <button class="dropbtn">Login / Register</button>
+                        <div class="dropdown-content">
+                          <a href="HTML/login.html">Login</a>
+                          <a href="HTML/register.html">Register</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <div id="slide-show-container">
+            <img class="slide" src="Images/pisica1.jpg">
+            <img class="slide" src="Images/pisica2.jpg">
+            <img class="slide" src="Images/pisica3.jpg">
+            <img class="slide" src="Images/pisica4.jpg">
+        </div>
+    </section>
+    <section id="main-body">
+        <p id="products-title">Produsele noastre</p>
+        <table id="tabel-produse">
+            <tr>
+                <td class="celula-produs">
+                    <img src="Images/mancare1.jpg" class="produse">
+                </td>
+                <td class="celula-produs">
+                    <img src="Images/mancare2.png" class="produse">
+                </td>
+                <td class="celula-produs">
+                    <img src="Images/mancare3.jpg" class="produse">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Gama PurrPaws mancare uscata include rețete pentru pisicuțe, pisici adulte și bătrâne - toate realizate cu până la 80% carne de pui. Există, de asemenea, o varietate de pește cu o singură proteină care nu conține cereale si este sanatoasa!</p>
+                </td>
+                <td>
+                    <p>Dacă vă place să petreceți timp individual cu pisica dvs., încercați gama noastră de dulciuri Applaws. Aceste dulciuri fără cereale sunt fabricate numai cu ingrediente naturale, nu au zahăr adăugat și pot fi hrănite manual.</p>
+                </td>
+                <td>
+                    <p>Pungile pentru pisici PurrPaws sunt disponibile atât în bulion gustos, cât și în jeleu natural. Disponibile ca o singură porție sau în pachete multiple practice, acestea reprezintă o modalitate de a aduce varietate în dieta pisicii dumneavoastră.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="celula-buton">
+                    <a href="HTML/login.html" class="link-cos"><button class="buton-cumpara">Cumpăra</button></a>
+                </td>
+                <td class="celula-buton">
+                    <a href="HTML/login.html" class="link-cos"><button class="buton-cumpara">Cumpăra</button></a>
+                </td>
+                <td class="celula-buton">
+                    <a href="HTML/login.html" class="link-cos"><button class="buton-cumpara">Cumpăra</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="celula-produs">
+                    <img src="Images/mancare4.jpg" class="produse">
+                </td>
+                <td class="celula-produs">
+                    <img src="Images/mancare5.jpg" class="produse">
+                </td>
+                <td class="celula-produs">
+                    <img src="Images/mancare6.jpg" class="produse">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Pungile pentru pisici PurrPaws sunt disponibile într-un bulion gustos. Disponibile sub formă de porție unică sau într-un multipack practic în vrac, acestea reprezintă o modalitate convenabilă.</p>
+                </td>
+                <td>
+                    <p>Gama de conserve pentru pisici PurrPaws cuprinde peste 20 de rețete foarte gustoase, cu varietăți specifice create pentru a răspunde nevoilor pisicilor și pisicilor în vârstă.</p>
+                </td>
+                <td>
+                    <p>Conserva purrpaws TUNA FILLET ste o hrana completa pentru pisici adulte. Conservele purrpaws contin bucati de carne de peste in sos delicios, care vor fi, cu siguranta, chiar si pe placul celor mai mofturoase feline.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="celula-buton">
+                    <a href="HTML/login.html" class="link-cos"><button class="buton-cumpara">Cumpăra</button></a>
+                </td>
+                <td class="celula-buton">
+                    <a href="HTML/login.html" class="link-cos"><button class="buton-cumpara">Cumpăra</button></a>
+                </td>
+                <td class="celula-buton">
+                    <a href="HTML/login.html" class="link-cos"><button class="buton-cumpara">Cumpăra</button></a>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <table id="tabel-footer">
+            <tr class="footer-row">
+                <td class="text-foot"><a href="HTML/despre-noi.html">Despre noi</a></td>
+                <td class="text-foot">Termeni și condiții</td>
+                <td class="text-foot"><a href="HTML/contact.html">Contact</a></td>
+            </tr>
+            <tr class="footer-row">
+                <td><img class="img-social" src="Images/flogo.png"></td>
+                <td><img class="img-social" src="Images/ilogo.png"></td>
+                <td><img class="img-social" src="Images/ylogo.png"></td>
+            </tr>
+            <tr class="footer-row">
+                <td id="termeni-cond" colspan="3">© 2023 PurrPaws mancare naturala de pisici toate drepturile rezervate</td>
+            </tr>
+        </table>
+    </footer>
+</body>
+</html>

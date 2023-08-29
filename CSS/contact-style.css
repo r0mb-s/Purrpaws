@@ -1,0 +1,43 @@
+.input-form{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #cdcaca;
+    border-width: 2px;
+}
+
+.icon{
+    width: 100px;
+}
+
+#tabel{
+    width: 70%;
+    margin-left: 15%;
+}
+
+#bara-informatii{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+}
+
+#buton-submit{
+    border: none;
+    background-color: rgb(21, 172, 222);
+    color: white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-bottom: 2%;
+}
+
+#body{
+    width: 70%;
+    height: 50%;
+    background-color: white;
+    margin-left: 15%;
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #f2f2f2f2;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../CSS/login-register-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Log in</title>
+</head>
+<body>
+    <a href="../index.html"><img src="../Images/home-icon.png" width="3%" height="3%"></a>
+    <div id="main-div">
+        <form id="target">
+            <table id="form-table">
+                <tr>
+                    <td colspan="2" class="element-login">Log in</td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" required="required"><br></td>
+                </tr>
+                <tr>
+                    <td><label for="parola">Password:</label></td>
+                    <td><input type="password" name="parola" required="required"><br></td>
+                </tr>
+                <tr>
+                    <td><button id="redir">Register</button></td>
+                    <td class="element-login"><input type="submit" value="Submit" id="submit"></td>
+                </tr>
+                <tr id="mesaj1" style="display: none;">
+                    <td colspan="2" class="mesaj">Email incorect</td>
+                </tr>
+                <tr id="mesaj2" style="display: none;">
+                    <td colspan="2" class="mesaj">Parola incorecta</td>
+            </table>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#redir').on('click', function(){
+                window.location.replace('register.html');
+            });
+            $('#target').on('submit', function(){
+                $.post("../PHP/login.php", $("#target").serialize(), function(rez){
+                    if(rez == "wemail"){
+                        if($('#mesaj2').css('display') != 'none')
+                            $('#mesaj2').hide();
+                        if($('#mesaj1').css('display') == 'none')
+                            $('#mesaj1').show();
+                        else
+                            $('#mesaj1').show(0).delay(50).hide(0).delay(50).show(0);
+                    }
+                    else if(rez == "wparola"){
+                        if($('#mesaj1').css('display') != 'none')
+                            $('#mesaj1').hide();
+                        if($('#mesaj2').css('display') == 'none')
+                            $('#mesaj2').show();
+                        else
+                            $('#mesaj2').show(0).delay(50).hide(0).delay(50).show(0);
+                    }
+                    else{
+                        var form = $('<form action="../PHP/shop.php" method="post">' + '<input type="text" name="id" value="' + rez + '" />' + '</form>');
+                        $('body').append(form);
+                        form.submit();
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #f2f2f2f2;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../CSS/login-register-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <title>Register</title>
+</head>
+<body>
+    <a href="../index.html"><img src="../Images/home-icon.png" width="3%" height="3%"></a>
+    <div id="main-div">
+        <form id="target">
+            <table id="form-table">
+                <tr>
+                    <td colspan="2" class="element-login">Register</td>
+                </tr>
+                <tr>
+                    <td><label for="prenume">Prenume:</label></td>
+                    <td><input type="text" name="prenume" required="required"><br></td>
+                </tr>
+                <tr>
+                    <td><label for="nume">Nume:</label></td>
+                    <td><input type="text" name="nume" required="required"><br></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" name="email" required="required"><br></td>
+                </tr>
+                <tr>
+                    <td><label for="parola">Password:</label></td>
+                    <td><input type="password" name="parola" required="required"><br></td>
+                </tr>
+                <tr>
+                    <td><button id="redir">Login</button></td>
+                    <td class="element-login"><input type="submit" value="Submit" id="submit"></td>
+                </tr>
+                <tr id="mesaj" style="display: none;">
+                    <td colspan="2" class="mesaj">Exista deja un uitlizator cu emailul introdus!</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#redir').on('click', function(){
+                window.location.replace('login.html');
+            });
+            $('#target').on('submit', function(){
+                $.ajax({
+                    type: "POST",
+                    url: "../PHP/register.php",
+                    data: $('#target').serialize(),
+                    success: function(data){
+                        window.location = "login.html";
+                    },
+                    error: function(){
+                        if($('#mesaj').css('display') == 'none')
+                                $('#mesaj').show();
+                        else
+                            $('#mesaj').show(0).delay(50).hide(0).delay(50).show(0);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
